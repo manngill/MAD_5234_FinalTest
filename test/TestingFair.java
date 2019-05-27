@@ -32,7 +32,7 @@ public class TestingFair {
 
     
     @Test
-    public void testCalculateTotal() {
+    public void  testcalculateTotal() {
          
     }
     
@@ -57,7 +57,36 @@ public class TestingFair {
         assertEquals(3.00, result,0.0);
     }
     
-
+         @Test
+    public void test3() {
+         
+      String[] from = {"Don Mills"};
+        String[] to = {"Finch"};
+        double result = TestingFair.calculateTotal(from,to);
+        assertEquals(3.00, result,0.0);
+    }
     
+       
+         @Test
+    public void test4() {
+         
+        String[] from = {"Finch", "Leslie"};
+        String[] to = {"Sheppard","Don Mills"};
+        double result = TestingFair.calculateTotal(from,to);
+        assertEquals(5.50, result,0.0);
+    }
+    
+         @Test
+         public void test5() {
+
+             String[] from = {"Finch", "sheppard","Finch"};
+             String[] to = {"Sheppard","Don Mills","Sheppard"};
+             double result = TestingFair.calculateTotal(from,to);
+             assertEquals(6.0, result,0.0);
+         }
+
+         
+         
+         
     
 }
