@@ -1,6 +1,6 @@
 public class FairTesting{
 	
-	public String Testingfair(double price , double totalfair) {
+	public String calculateTotal(double price , double totalfair) {
 		double fair = (price + totalfair);
 		System.out.println("Total Fair is: " + fair);
 		

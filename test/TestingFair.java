@@ -1,43 +1,63 @@
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
 public class TestingFair {
+    TestingFair FairTesting;
+        
+    
+    public TestingFair() {
+        FairTesting = new TestingFair();
+    }
+    
+    @BeforeClass
+    public static void setUpClass() {
+    }
+    
+    @AfterClass
+    public static void tearDownClass() {
+    }
+    
+    @Before
+    public void setUp() {
+    }
+    
+    @After
+    public void tearDown() {
+    }
 
+    
+    @Test
+    public void testCalculateTotal() {
+         
+    }
+    
+       
+        @Test
+    public void test1() {
+         
+      String[] from = {"leslie"};
+        String[] to = {"Don Mills"};
+        double result = TestingFair.calculateTotal(from,to);
+        assertEquals(2.50, result,0.0);
+    }
+    
+    
+   
+         @Test
+    public void test2() {
+         
+      String[] from = {"Sheppard"};
+        String[] to = {"Finch"};
+        double result = TestingFair.calculateTotal(from,to);
+        assertEquals(3.00, result,0.0);
+    }
+    
 
-	
-	
-	public void testR1() {
-		
-		FairTesting chrg = new FairTesting();
-		String fair = chrg.Testingfair(2.50, 3);
-		assertEquals("zone one trip", fair);
-	}
-	
-	@Test
-	public void testR2() {
-		FairTesting chrg = new FairTesting();
-		String fair = chrg.Testingfair(3, 3);
-		assertEquals("Two way zone", fair);
-	}
-
-	@Test
-	
-	
-	
-	public void testR3() {
-		FairTesting chrg = new FairTesting();
-		String fair = chrg.Testingfair(3, 3);
-		assertEquals("Trip between zones", fair);
-	}
-
-	@Test
-	public void testR4() {
-		FairTesting chrg = new FairTesting();
-		String fair = chrg.Testingfair(3, 3);
-		assertEquals("more trips", fair);	
-	}
-
+    
+    
 }
